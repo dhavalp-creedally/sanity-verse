@@ -1,0 +1,49 @@
+import {defineField, defineType} from 'sanity'
+import { CogIcon } from '@sanity/icons';
+
+export default defineType({
+  name: 'settings',
+  title: 'Settings',
+  type: 'document',
+  icon: CogIcon,
+  fields: [
+    defineField({
+      name: 'siteTitle',
+      title: 'Site Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'siteDescription',
+      title: 'Site Description',
+      type: 'text',
+    }),
+    defineField({
+      name: 'siteLogo',
+      title: 'Site Logo',
+      type: 'image',
+    }),
+    defineField({
+      name: 'copyrightText',
+      title: 'Copyright Text',
+      type: 'string',
+    }),
+    defineField({
+      name: 'socialLinks',
+      title: 'Social Links',
+      type: 'array',
+      of: [{ type: 'socialLink' }],
+    }),
+  ],
+  preview: {
+    select: {
+      title: 'siteTitle',
+      media: 'siteLogo',
+    },
+    prepare(selection) {
+      return {
+        title: selection.title || 'Creedally Blog',
+        media: selection.media,
+      };
+    },
+  },
+})
