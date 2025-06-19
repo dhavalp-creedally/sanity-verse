@@ -1,26 +1,15 @@
 import {defineField, defineType} from 'sanity'
-import bodyContent from '../objects/bodyContent'
-import alternativeText from '../fields/alternativeText'
+import content from '../objects/sections/content'
 export default defineType({
-    name: 'blog',
-    title: 'Blog',
+    name: 'faqs',
+    title: 'FAQs',
     type: 'document',
-    groups: [
-        {
-        name: 'content',
-        title: 'Content',
-        },
-        {
-        name: 'seo',
-        title: 'SEO',
-        }
-    ],
     fields: [
         defineField({
             name: 'title',
             title: 'Title',
             type: 'string',
-            validation: Rule => Rule.required().error('Blog title is required'),
+            validation: Rule => Rule.required().error('FAQ title is required'),
         }),
         defineField({
             name: 'slug',
@@ -30,15 +19,6 @@ export default defineType({
                 source: 'title',
                 maxLength: 96,
             },
-        }),
-        defineField({
-            name: 'featuredImage',
-            title: 'Featured Image',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
-            fields:[alternativeText]
         }),
         defineField({
             name: 'publishedAt',
@@ -51,25 +31,18 @@ export default defineType({
             type: 'reference',
             to: {type: 'author'},
         }),
-        bodyContent,
-        defineField({
-            name: 'seo',
-            title: 'SEO',
-            type: 'seo',
-        }),
+        content
     ],
     preview: {
         select: {
         title: 'title',
         author: 'author.name',
-        media: 'postThumbnail',
         },
         prepare(selection) {
-            const {title, author, media} = selection
+            const {title, author} = selection
             return {
-                title: title && title.trim() !== '' ? title : 'Blog Title',
+                title: title && title.trim() !== '' ? title : 'FAQ Title',
                 subtitle: author ? `by ${author}` : '',
-                media,
             }
         },
     },

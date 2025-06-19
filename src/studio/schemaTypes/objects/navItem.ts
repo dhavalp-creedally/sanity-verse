@@ -1,5 +1,7 @@
 import { defineType, defineField } from 'sanity'
 
+import link from '../fields/link'
+
 export default defineType({
   name: 'navItem',
   title: 'Navigation Item',
@@ -11,15 +13,7 @@ export default defineType({
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
-    defineField({
-      name: 'url',
-      title: 'Link',
-      type: 'url',
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ['http', 'https', 'mailto', 'tel'],
-        }).required(),
-    }),
+    link,
   ],
   preview: {
     select: {

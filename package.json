@@ -4,45 +4,48 @@
   "private": true,
   "main": "package.json",
   "license": "UNLICENSED",
-  "keywords": ["sanity"],
+  "keywords": [
+    "sanity"
+  ],
   "scripts": {
     "dev:next": "next dev --turbopack",
     "build:next": "next build",
     "start:next": "next start",
     "lint:next": "next lint",
-
     "dev:sanity": "sanity dev",
     "start:sanity": "sanity start",
     "build:sanity": "sanity build",
     "deploy:sanity": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy",
-
     "dev": "npm run dev:next & npm run dev:sanity",
     "build": "npm run build:next && npm run build:sanity",
     "start": "npm run start:next & npm run start:sanity",
     "lint": "npm run lint:next"
   },
   "dependencies": {
+    "@sanity/assist": "^3.2.2",
+    "@sanity/color-input": "^4.0.3",
+    "@sanity/vision": "^3.93.0",
     "next": "15.3.3",
     "next-sanity": "^9.9.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "sanity": "^3.92.0",
-    "@sanity/vision": "^3.92.0",
+    "react-is": "^19.1.0",
+    "sanity": "^3.93.0",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
-    "typescript": "^5.8",
+    "@eslint/eslintrc": "^3",
+    "@sanity/eslint-config-studio": "^5.0.2",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19.1",
     "@types/react-dom": "^19",
-    "tailwindcss": "^4",
-    "@tailwindcss/postcss": "^4",
     "eslint": "^9.28",
     "eslint-config-next": "15.3.3",
-    "@eslint/eslintrc": "^3",
-    "@sanity/eslint-config-studio": "^5.0.2",
-    "prettier": "^3.5"
+    "prettier": "^3.5",
+    "tailwindcss": "^4",
+    "typescript": "^5.8"
   },
   "prettier": {
     "semi": false,
