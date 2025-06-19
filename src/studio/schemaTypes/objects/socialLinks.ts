@@ -1,5 +1,7 @@
 import { defineType, defineField } from 'sanity'
 
+import link from '../fields/link'
+import alternativeText from '../fields/alternativeText'
 export default defineType({
   name: 'socialLink',
   title: 'Social Link',
@@ -12,6 +14,7 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      fields:[alternativeText]
     }),
     defineField({
       name: 'title',
@@ -19,15 +22,7 @@ export default defineType({
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
-    defineField({
-      name: 'url',
-      title: 'Link',
-      type: 'url',
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ['http', 'https', 'mailto', 'tel'],
-        }).required(),
-    }),
+    link,
   ],
   preview: {
     select: {

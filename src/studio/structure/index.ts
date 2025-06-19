@@ -1,14 +1,14 @@
 // src/structure/deskStructure.ts
 import { StructureResolver } from 'sanity/structure';
 import {
-  HomeIcon,
   DocumentIcon,
   PinIcon,
   FolderIcon,
   TagIcon,
   UsersIcon,
-  MenuIcon,
   CogIcon,
+  FeedbackIcon,
+  BlockquoteIcon
 } from '@sanity/icons';
 
 export const structure: StructureResolver = (S) =>
@@ -51,10 +51,16 @@ export const structure: StructureResolver = (S) =>
       S.divider(),
 
       S.listItem()
-        .title('Navigation')
-        .icon(MenuIcon)
-        .schemaType('navigation')
-        .child(S.documentTypeList('navigation').title('Navigation')),
+        .title('FAQs')
+        .icon(FeedbackIcon)
+        .schemaType('faqs')
+        .child(S.documentTypeList('faqs').title('FAQs')),
+
+      S.listItem()
+        .title('Testimonials')
+        .icon(BlockquoteIcon)
+        .schemaType('testimonial')
+        .child(S.documentTypeList('testimonial').title('Testimonials')),
 
       S.divider(),
 
