@@ -1,9 +1,20 @@
 import {defineField, defineType} from 'sanity'
-
+import bodyContent from '../objects/bodyContent'
+import alternativeText from '../fields/alternativeText'
 export default defineType({
     name: 'page',
     title: 'Page',
     type: 'document',
+    groups: [
+        {
+        name: 'content',
+        title: 'Content',
+        },
+        {
+        name: 'seo',
+        title: 'SEO',
+        }
+    ],
     fields: [
         defineField({
             name: 'title',
@@ -27,6 +38,7 @@ export default defineType({
             options: {
                 hotspot: true,
             },
+            fields:[alternativeText]
         }),
         defineField({
             name: 'publishedAt',
@@ -39,6 +51,7 @@ export default defineType({
             type: 'reference',
             to: {type: 'author'},
         }),
+        bodyContent,
         defineField({
             name: 'seo',
             title: 'SEO',

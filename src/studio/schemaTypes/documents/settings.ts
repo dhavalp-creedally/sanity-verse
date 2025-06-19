@@ -33,6 +33,18 @@ export default defineType({
       type: 'array',
       of: [{ type: 'socialLink' }],
     }),
+    defineField({
+        name: 'headerNavigation',
+        title: 'Header Navigation',
+        type: 'array',
+        of: [{ type: 'navItem' }],
+    }),
+     defineField({
+        name: 'footerNavigation',
+        title: 'Footer Navigation',
+        type: 'array',
+        of: [{ type: 'navItem' }],
+    }),
   ],
   preview: {
     select: {
@@ -41,7 +53,7 @@ export default defineType({
     },
     prepare(selection) {
       return {
-        title: selection.title || 'Creedally Blog',
+        title: selection.title || 'Creedally Studio',
         media: selection.media,
       };
     },

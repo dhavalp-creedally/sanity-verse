@@ -3,6 +3,8 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
+import {assist} from '@sanity/assist'
+import { colorInput } from '@sanity/color-input'
 import {schemaTypes} from './src/studio/schemaTypes'
 import { clientEnv } from './src/env/clientEnv';
 import { structure } from './src/studio/structure';
@@ -15,7 +17,12 @@ export default defineConfig({
   projectId: clientEnv.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: clientEnv.NEXT_PUBLIC_SANITY_DATASET,
 
-  plugins: [structureTool({structure}), visionTool()],
+  plugins: [
+    structureTool({structure}), 
+    visionTool(),
+    assist(),
+    colorInput()
+  ],
 
   schema: {
     types: schemaTypes,

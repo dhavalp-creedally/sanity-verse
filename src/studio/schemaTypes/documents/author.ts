@@ -1,5 +1,6 @@
 import {defineField, defineType} from 'sanity'
-import socialLinks from '../objects/socialLinks'
+
+import alternativeText from '../fields/alternativeText'
 
 export default defineType({
   name: 'author',
@@ -21,12 +22,18 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'designation',
+      title: 'Designation',
+      type: 'string',
+    }),
+    defineField({
       name: 'image',
-      title: 'Image',
+      title: 'Avatar',
       type: 'image',
       options: {
         hotspot: true,
       },
+      fields:[alternativeText]
     }),
     defineField({
       name: 'bio',
@@ -37,7 +44,6 @@ export default defineType({
           title: 'Block',
           type: 'block',
           styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
         },
       ],
     }),
