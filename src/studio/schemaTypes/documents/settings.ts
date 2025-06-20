@@ -28,6 +28,29 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'homePage',
+      title: 'Homepage',
+      type: 'reference',
+      to: [{ type: 'page' }],
+      options: {
+        disableNew: true,
+      }
+    }),
+    defineField({
+      name: 'featuredPages',
+      title: 'Featured Pages',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'page' }],
+          options: {
+            disableNew: true,
+          },
+        },
+      ],
+    }),
+    defineField({
       name: 'socialLinks',
       title: 'Social Links',
       type: 'array',
