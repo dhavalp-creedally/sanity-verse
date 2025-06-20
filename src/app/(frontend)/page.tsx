@@ -1,6 +1,5 @@
-
-export default function Home() {
+export default async function Page() {
   return (
-    <div>Thiis is our custom page</div>
+    <div>Thiis is our custom page sdhgjfghd</div>
   );
 }
