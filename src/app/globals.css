@@ -12,6 +12,8 @@
   --color-green: #1a8245;
   --color-green-dark: #eff9f3;
   --color-catskill: #F0F4FF;
+  --color-gradient-1: #e4f2fe;
+  --color-gradient-2: #ffeefe;
   --text-xs: 0.75rem;
   --spacing: 0.25rem;
   --font-weight-normal: 400;
@@ -21,7 +23,7 @@
   --font-weight-black: 900;
   --text-xs--line-height: calc(1 / 0.75); /* ≈ 1.333 */
 
-  /* Text Sizes */
+  
   --text-sm: 14px;
   --text-base: 16px;
   --text-lg: 18px;
@@ -33,7 +35,6 @@
   --text-6xl: 60px;
   --text-7xl: 72px;
 
-  /* Line Heights */
   --line-height-sm: 22px;
   --line-height-base: calc(1.5 / 1); /* = 1.5 */
   --line-height-lg: 24px;
@@ -45,7 +46,6 @@
   --line-height-6xl: 72px;
   --line-height-7xl: 84px;
 
-  /* Optional: Custom naming for headings */
   --text-heading-1: var(--text-6xl);
   --text-heading-1--line-height: var(--line-height-6xl);
 
@@ -77,6 +77,8 @@
   --color-catskill: var(--color-catskill);
   --color-green-dark: var(--color-green-dark);
   --color-green: var(--color-green);
+  --color-gradient-1: var(--color-gradient-1);
+  --color-gradient-2: var(--color-gradient-2);
 }
 
 body {
