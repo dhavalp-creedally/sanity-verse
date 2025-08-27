@@ -16,4 +16,11 @@ export default defineType({
     textAlign,
     additionalClass,
   ],
+  preview: {
+    prepare() {
+      return {
+        title: '🔘 Button Group',
+      };
+    },
+  },
 })

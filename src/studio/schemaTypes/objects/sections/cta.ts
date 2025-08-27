@@ -31,4 +31,11 @@ export default defineType({
     }),
     additionalClass,
   ],
+  preview: {
+    prepare() {
+      return {
+        title: '📢 Call To Action',
+      };
+    },
+  },
 })

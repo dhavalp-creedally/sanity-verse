@@ -36,7 +36,7 @@ export default defineType({
       fields:[alternativeText]
     }),
     defineField({
-      name: 'bio',
+      name: 'content',
       title: 'Bio',
       type: 'array',
       of: [

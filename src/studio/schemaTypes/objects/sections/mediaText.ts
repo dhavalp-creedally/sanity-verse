@@ -50,5 +50,12 @@ export default defineType({
         },
         fields:[alternativeText],
     }),
-  ]
+  ],
+  preview: {
+    prepare() {
+      return {
+        title: '🖼️ Media + Text Section',
+      };
+    },
+  },
 })

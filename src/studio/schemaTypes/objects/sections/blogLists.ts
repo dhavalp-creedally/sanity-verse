@@ -68,11 +68,9 @@ export default defineType({
     select: {
       title: 'heading',
     },
-    prepare(selection) {
-      const { title } = selection;
+    prepare() {
       return {
-        title: title,
-        subtitle: 'Blog List',
+        title: '📰 Blog List Section',
       };
     },
   },

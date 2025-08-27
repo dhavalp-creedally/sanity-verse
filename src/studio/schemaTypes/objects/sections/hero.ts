@@ -52,5 +52,12 @@ export default defineType({
         fields:[alternativeText],
         hidden: ({ parent }) => parent?.layout !== 'layout2',
     }),
-  ]
+  ],
+  preview: {
+    prepare() {
+      return {
+        title: '🎯 Hero Section',
+      };
+    },
+  },
 })

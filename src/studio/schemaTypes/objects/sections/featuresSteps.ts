@@ -30,4 +30,11 @@ export default defineType({
     }),
     additionalClass,
   ],
+  preview: {
+    prepare() {
+      return {
+        title: '📌 Features / Steps Section',
+      };
+    },
+  },
 })

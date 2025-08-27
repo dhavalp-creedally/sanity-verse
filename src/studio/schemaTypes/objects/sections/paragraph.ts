@@ -15,4 +15,11 @@ export default defineType({
     textAlign,
     additionalClass
   ],
+  preview: {
+    prepare() {
+      return {
+        title: '📝 Paragraph Section',
+      };
+    },
+  },
 })

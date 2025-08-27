@@ -56,4 +56,11 @@ export default defineField({
       ],
     }),
   ],
+  preview: {
+    prepare() {
+      return {
+        title: '📄 Rich Text Section',
+      };
+    },
+  },
 })

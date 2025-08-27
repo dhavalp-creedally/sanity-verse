@@ -21,5 +21,14 @@ export default defineType({
       title: 'Keywords',
       type: 'string',
     }),
+    defineField({
+      name: 'disallowIndexing',
+      title: 'Disallow search indexing?',
+      type: 'boolean',
+      initialValue: false,
+      options: {
+        layout: 'switch',
+      },
+    }),
   ],
 })

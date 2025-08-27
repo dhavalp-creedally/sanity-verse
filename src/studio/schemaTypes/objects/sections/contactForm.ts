@@ -32,11 +32,9 @@ export default defineType({
     select: {
       title: 'heading',
     },
-    prepare(selection) {
-      const { title } = selection;
+    prepare() {
       return {
-        title: title,
-        subtitle: 'Contact Form',
+        title: '✉️ Contact Form Section',
       };
     },
   },

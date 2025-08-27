@@ -27,5 +27,12 @@ export default defineType({
       type: 'array',
       of: [defineArrayMember({ type: 'card' })],
     }),
-  ]
+  ],
+  preview: {
+    prepare() {
+      return {
+        title: '📇 Cards Section',
+      };
+    },
+  },
 })

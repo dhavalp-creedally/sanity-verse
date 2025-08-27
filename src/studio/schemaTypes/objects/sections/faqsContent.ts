@@ -34,5 +34,12 @@ export default defineType({
         of: [defineArrayMember({ type: 'button' })],
         validation: (Rule) => Rule.min(0).max(3).error('You must have between 0 and 3 buttons.'),
     }),
-  ]
+  ],
+  preview: {
+    prepare() {
+      return {
+        title: '❓ FAQ Section',
+      };
+    },
+  },
 })

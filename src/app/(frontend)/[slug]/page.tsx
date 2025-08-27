@@ -1,10 +1,63 @@
-import { Any } from "next-sanity";
+import type { Metadata } from 'next';
+import { sanityFetch } from "@/lib/client/live";
+import { getPageBySlugQuery } from "@/lib/queries";
+import { formatMetaData } from '@/components/seo';
+import PageSections from '@/components/layout/pageSections';
+import NotFound404 from '@/components/layout/NotFound404';
 
-export default async function Page( { params }: Any ) {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const { slug } = await params;
 
-  const { slug } = params;
+  if (!slug) {
+    return {
+      title: 'Page not found',
+    };
+  }
 
-  return (
-    <div>This is our custom page for slug: <strong>{slug}</strong></div>
-  );
+  const { data: pageContent } = await sanityFetch({
+    query: getPageBySlugQuery(slug),
+  });
+
+  if (!pageContent) {
+    return {
+      title: 'Page not found',
+    };
+  }
+
+  if (!pageContent?.seo) {
+    
+    return formatMetaData({
+        metaTitle: pageContent?.title,
+        metaDescription: pageContent?.excerpt,
+        keywords: ["page"],
+    });
+  }
+
+  if(!pageContent.seo.metaTitle) {
+    pageContent.seo.metaTitle = pageContent?.title;
+  }
+
+  if(!pageContent.seo.metaDescription) {
+    pageContent.seo.metaDescription = pageContent?.excerpt;
+  }
+  
+  return formatMetaData(pageContent.seo);
+}
+
+export default async function Page({ params }: { params: { slug: string } }) {
+  const { slug } = await params;
+
+  if (!slug) {
+    return <NotFound404 />;
+  }
+
+  const { data: pageContent } = await sanityFetch({
+    query: getPageBySlugQuery(slug),
+  });
+
+  if (!pageContent?.bodyContent) {
+    return <NotFound404 />;
+  }
+  
+  return <PageSections sections={pageContent.bodyContent} />;
 }

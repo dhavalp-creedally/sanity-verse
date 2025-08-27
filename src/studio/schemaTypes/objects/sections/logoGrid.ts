@@ -22,5 +22,12 @@ export default defineType({
       type: 'array',
       of: [defineArrayMember({ type: 'logo' })],
     }),
-  ]
+  ],
+  preview: {
+    prepare() {
+      return {
+        title: '🏢 Logo Grid Section',
+      };
+    },
+  },
 })

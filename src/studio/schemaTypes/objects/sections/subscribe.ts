@@ -29,4 +29,11 @@ export default defineType({
     }),
     additionalClass,
   ],
+  preview: {
+    prepare() {
+      return {
+        title: '📬 Subscribe Section',
+      };
+    },
+  },
 })

@@ -46,10 +46,27 @@ export default defineType({
             type: 'datetime',
         }),
         defineField({
+            name: 'categories',
+            title: 'Categories',
+            type: 'array',
+            of: [{ type: 'reference', to: { type: 'category' } }],
+        }),
+        defineField({
+            name: 'tags',
+            title: 'Tags',
+            type: 'array',
+            of: [{ type: 'reference', to: { type: 'tag' } }],
+        }),
+        defineField({
             name: 'author',
             title: 'Author',
             type: 'reference',
             to: {type: 'author'},
+        }),
+        defineField({
+            name: 'excerpt',
+            title: 'Excerpt',
+            type: 'text',
         }),
         bodyContent,
         defineField({

@@ -8,6 +8,6 @@ export default async function Header() {
     });
 
     return(
-        <HeaderHtml settings={settings} ></HeaderHtml>
+        <HeaderHtml settings={settings} />
     )
 }

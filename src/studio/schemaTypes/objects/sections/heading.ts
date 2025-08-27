@@ -15,4 +15,11 @@ export default defineType({
     level,
     textAlign,
   ],
+  preview: {
+    prepare() {
+      return {
+        title: '🧩 Heading Section',
+      };
+    },
+  },
 })

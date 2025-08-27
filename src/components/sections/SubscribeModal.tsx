@@ -8,7 +8,7 @@ export default function SubscribeModal({isSubscribe, setIsSubscribe}) {
                     <div className="w-full max-w-[600px] rounded-2xl shadow-box-2 bg-white p-4 sm:p-7.5 xl:p-12.5 relative transform transition-all scale-100">
                         <button
                             onClick={() => setIsSubscribe(false)}
-                            className="absolute top-6 right-6 flex items-center justify-center w-9 h-9 rounded-full ease-in duration-150 hover:text-dark hover:bg-gray-2"
+                            className="absolute top-6 right-6 flex items-center justify-center w-9 h-9 rounded-full ease-in duration-150 hover:text-dark hover:bg-gray-2 cursor-pointer"
                         >
                             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round"strokeLinejoin="round"strokeWidth={2}d="M6 18L18 6M6 6l12 12"/></svg>
                         </button>
@@ -21,12 +21,12 @@ export default function SubscribeModal({isSubscribe, setIsSubscribe}) {
                                     type="email"
                                     id="email"
                                     placeholder="Enter your email"
-                                    className="rounded-md border border-gray-4 bg-white placeholder:text-dark-3 w-full py-3.5 px-5 outline-hidden ease-in duration-300 focus:shadow-input focus:ring-2 focus:ring-dark-4/20 focus:border-transparent"
+                                    className="rounded-md border border-gray-200 bg-white placeholder:text-dark-3 w-full py-3.5 px-5 outline-hidden ease-in duration-300 focus:shadow-input focus:ring-2 focus:ring-dark-4/20 focus:border-transparent"
                                 />
                             </div>
                             <button
                                 type="submit"
-                                className="w-full rounded-md text-white font-medium flex justify-center py-3.5 px-5 bg-blue-700 hover:opacity-90 lg:transition-all lg:ease-linear lg:duration-300"
+                                className="w-full rounded-md text-white font-medium flex justify-center py-3.5 px-5 bg-blue-700 hover:opacity-90 lg:transition-all lg:ease-linear lg:duration-300 cursor-pointer"
                             >Subscribe</button>
                         </form>
                         <p className="text-center mt-4.5">Don&#39;t worry, I don&#39;t spam</p>
