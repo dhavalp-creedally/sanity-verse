@@ -11,7 +11,7 @@ import { structure } from './src/studio/structure';
 export default defineConfig({
   basePath: '/studio',
   name: 'default',
-  title: 'CreedAlly Studio',
+  title: 'Sanity Verse',
 
   projectId: clientEnv.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: clientEnv.NEXT_PUBLIC_SANITY_DATASET,

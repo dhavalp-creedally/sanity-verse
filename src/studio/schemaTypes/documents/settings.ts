@@ -62,7 +62,7 @@ export default defineType({
     },
     prepare(selection) {
       return {
-        title: selection.title || 'Creedally Studio',
+        title: selection.title || 'Sanity Verse',
         media: selection.media,
       };
     },
