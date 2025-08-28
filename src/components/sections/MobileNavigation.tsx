@@ -9,7 +9,7 @@ export default function MobileNavigation({ isOpen, setIsOpen, isSubscribe, setIs
           onClick={() => setIsOpen(false)}
         />
         <div
-          className={`fixed right-0 top-0 h-full w-72 max-w-full shadow-xl px-6 py-6 z-50 flex flex-col transition-transform duration-300 transform ${
+          className={`bg-white fixed right-0 top-0 h-full w-72 max-w-full shadow-xl px-6 py-6 z-50 flex flex-col transition-transform duration-300 transform ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
