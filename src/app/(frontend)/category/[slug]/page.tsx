@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import { sanityFetch } from "@/lib/client/live";
 import { getCategoryBySlugQuery,  } from "@/lib/queries";
 import { formatMetaData } from '@/components/seo';
@@ -6,7 +5,7 @@ import NotFound404 from '@/components/layout/NotFound404';
 import BlogLists from "@/components/layout/BlogLists";
 import SubscribeSection from '@/components/sections/SubscribeSection';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: any) {
   const { slug } = await params;
 
   if (!slug) {
@@ -45,7 +44,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return formatMetaData(categoryData.seo);
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: any) {
   const { slug } = await params;
 
   if (!slug) {

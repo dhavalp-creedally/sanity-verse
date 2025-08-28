@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Image from "next/image";
 import Link from "next/link";
 import { sanityFetch } from "@/lib/client/live";
@@ -10,7 +9,7 @@ import SubscribeSection from '@/components/sections/SubscribeSection';
 import DateFormat from "@/components/modules/DateFormat";
 import ReadBlogTime from "@/components/modules/ReadBlogTime";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: any) {
   const { slug } = await params;
 
   if (!slug) {
@@ -49,7 +48,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return formatMetaData(blogData.seo);
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: any) {
   const { slug } = await params;
 
   if (!slug) {
@@ -78,7 +77,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                         {blogData?.author?.image ? (
                             <Image src={blogData?.author?.image?.url || "/placeholder.svg"} width={300} height={300} alt={blogData?.author?.name} className="w-13 h-13 object-cover rounded-full" />
                         ) : (
-                            <span className="text-xs font-medium text-gray-600 flex justify-center items-center w-13 h-13 bg-gray-300 rounded-full overflow-hidden">{blogData?.author?.name.split(" ").map((n) => n[0]).join("")}</span>
+                            <span className="text-xs font-medium text-gray-600 flex justify-center items-center w-13 h-13 bg-gray-300 rounded-full overflow-hidden">{blogData?.author?.name.split(" ").map((n: any) => n[0]).join("")}</span>
                         )}
                         <p className="text-xl font-bold text-gray-600 leading-none">{blogData?.author?.name}</p>
                     </Link>

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-export default function MobileNavigation({ isOpen, setIsOpen, isSubscribe, setIsSubscribe, settings }) {
+export default function MobileNavigation({ isOpen, setIsOpen, isSubscribe, setIsSubscribe, settings }: any) {
 
     return(
         <div className={`fixed inset-0 z-50 lg:hidden pointer-events-auto ${isOpen? 'w-full' :'w-0'}`}>
@@ -38,7 +38,7 @@ export default function MobileNavigation({ isOpen, setIsOpen, isSubscribe, setIs
             </Link>
           </div>
           <nav className="flex flex-col space-y-4 mt-6">
-            {settings?.headerNavigation?.map((item, index) => (
+            {settings?.headerNavigation?.map((item: any, index: number) => (
               <Link
                 key={index}
                 href={item.url}

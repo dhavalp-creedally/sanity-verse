@@ -1,8 +1,7 @@
-import type { Metadata } from 'next';
 import { formatMetaData } from '@/components/seo';
 import SearchPageSection from "@/components/layout/SearchPageSection";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata() {
  
     return formatMetaData({
         metaTitle: 'Search Results',

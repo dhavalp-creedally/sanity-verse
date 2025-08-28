@@ -105,7 +105,7 @@ export default function HeaderHtml({ settings }: { settings: SettingsType } ) {
             {( settings?.headerNavigation ) ? (
               <nav>
                 <ul className="flex lg:items-center flex-col lg:flex-row gap-5 lg:gap-10">
-                  {settings?.headerNavigation?.map((item, index) => (
+                  {settings?.headerNavigation?.map((item: any, index: number) => (
                     <li key={index} className={`group relative lg:py-6.5 ${stickyMenu ? 'lg:py-4!' : ''}`}>
                       <Link href={item.url}>{item.title}</Link>
                     </li>

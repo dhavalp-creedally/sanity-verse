@@ -1,15 +1,21 @@
 import type { NextConfig } from "next";
+import dotenv from "dotenv";
+
+// Load .env variables
+dotenv.config();
 
 const nextConfig: NextConfig = {
-  devIndicators:false,
+  devIndicators: {
+    buildActivity: false,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'cdn.sanity.io',
+        protocol: "https",
+        hostname: "cdn.sanity.io",
       },
     ],
   },

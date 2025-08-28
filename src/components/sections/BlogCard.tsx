@@ -25,7 +25,7 @@ export default function BlogCard({ blog }: { blog: any }) {
                             {blog?.author?.image ? (
                                 <Image src={blog?.author?.image?.url || "/placeholder.svg"} width={300} height={300} alt={blog?.author?.name} className="w-8 h-8 object-cover rounded-full" />
                             ) : (
-                                <span className="text-xs font-medium text-gray-600 flex justify-center items-center w-8 h-8 bg-gray-300 rounded-full overflow-hidden">{blog?.author?.name.split(" ").map((n) => n[0]).join("")}</span>
+                                <span className="text-xs font-medium text-gray-600 flex justify-center items-center w-8 h-8 bg-gray-300 rounded-full overflow-hidden">{blog?.author?.name.split(" ").map((n: any) => n[0]).join("")}</span>
                             )}
                             <p className="text-sm text-gray-600 leading-none">{blog?.author?.name}</p>
                         </Link>

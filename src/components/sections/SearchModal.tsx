@@ -1,4 +1,4 @@
-export default function SearchModal({isSearch, setIsSearch}) {
+export default function SearchModal({isSearch, setIsSearch}: any) {
     
     return(
         <>

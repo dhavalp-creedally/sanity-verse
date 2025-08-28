@@ -23,15 +23,16 @@
     "lint": "npm run lint:next"
   },
   "dependencies": {
-    "@sanity/assist": "^3.2.2",
+    "@sanity/assist": "^5.0.0",
     "@sanity/vision": "^4.5.0",
+    "dotenv": "^17.2.1",
     "next": "15.3.3",
-    "next-sanity": "^9.9.6",
+    "next-sanity": "10.0.15",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "5.5.0",
     "react-is": "^19.1.0",
-    "sanity": "^4.5.0",
+    "sanity": "^4.6.0",
     "styled-components": "^6.1.18",
     "swiper": "^11.2.10",
     "valibot": "^1.1.0"

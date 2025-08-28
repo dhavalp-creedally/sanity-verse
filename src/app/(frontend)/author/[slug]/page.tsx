@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NotFound404 from '@/components/layout/NotFound404';
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: any) {
     const { slug } = await params;
 
     if (!slug) {

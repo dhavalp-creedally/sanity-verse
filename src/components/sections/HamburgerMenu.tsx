@@ -1,5 +1,5 @@
 'use client';
-export default function HamburgerMenu({ isOpen, setIsOpen }) {
+export default function HamburgerMenu({ isOpen, setIsOpen }: any) {
 
     return(
         <button

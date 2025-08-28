@@ -1,4 +1,4 @@
-export default function SubscribeModal({isSubscribe, setIsSubscribe}) {
+export default function SubscribeModal({isSubscribe, setIsSubscribe}: any) {
     
     return(
         <>
