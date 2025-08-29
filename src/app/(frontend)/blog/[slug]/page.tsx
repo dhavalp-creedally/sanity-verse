@@ -69,7 +69,7 @@ export default async function Page({ params }: any) {
         <div className='entry-content'>
             <h1 className='font-bold text-2xl sm:text-4xl lg:text-custom-2 text-dark mb-5 text-center'>{blogData.title}</h1>
             <div className='flex justify-center items-center mb-5'>
-              <Image src={blogData?.featuredImage?.url || "/placeholder.svg"} alt={blogData?.title} width={1200} height={1080} className="w-full object-cover max-h-[650px] rounded-xl" />
+              <Image src={blogData?.featuredImage?.url || "/placeholder-1280-750.png"} alt={blogData?.title} width={1200} height={1080} className="w-full object-cover max-h-[650px] rounded-xl" />
             </div>
              <div className="flex items-center gap-5 justify-center mb-5">
                 <div className="flex gap-2.5 justify-center items-center">

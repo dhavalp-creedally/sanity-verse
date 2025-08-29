@@ -1,7 +1,7 @@
 export default function ContactFormSection({ section }: { section: any }) {
   
   return (
-    <div className={`contact-form-section py-16 lg:py-20 bg-gradient-to-t from-slate-100 to-slate-50 ${section?.class || ""}`} >
+    <div className={`contact-form-section py-12 lg:py-20 bg-gradient-to-t from-slate-100 to-slate-50 ${section?.class || ""}`} >
       <div className="container">
         <div className="mb-10 text-center">
           {section?.subHeading && (<p className="text-lg mb-3 font-bold">{section.subHeading}</p>)}

@@ -40,7 +40,7 @@ export default function FooterHtml({ settings }: { settings: SettingsType } ) {
                 <div className="text-center lg:text-left text-[color:var(--color-dark-4)]">{(settings?.copyrightText) ? settings?.copyrightText : copyrightText}</div>
                 <div className="flex flex-wrap items-center justify-center gap-x-3 text-center text-base text-[color:var(--color-dark-4)]">
                   {settings?.footerNavigation?.map((item, index) => (
-                    <React.Fragment key={item.url || index}>
+                    <React.Fragment key={index || item.url}>
                       <Link href={item.url} className="hover:text-[var(--primary)] transition text-sm hover:text-black">
                         {item.title}
                       </Link>

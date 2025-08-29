@@ -35,7 +35,7 @@ export default function BlogLists({categorySlug = '', tagSlug='', authorSlug = '
                     ))
                 ) : ''}
             </div>
-            <div className="w-full mt-5 text-center">
+            <div className="w-full mt-5 mb-5 text-center">
                 <Pagination
                 totalPosts={totalPosts}
                 perPage={perPage}

@@ -51,7 +51,7 @@ export default function SearchPageSection({ categorySlug = "" }: SearchPageSecti
   };
 
   return (
-    <div className="search-lists py-16 lg:py-20">
+    <div className="search-lists py-12 lg:py-20">
       <div className="w-full py-10 bg-gradient-to-t from-slate-100 to-slate-50 mb-10">
         <div className="container py-10">
           <div className="flex items-center justify-center flex-col mb-5">

@@ -9,14 +9,15 @@ export default function BlogCard({ blog }: { blog: any }) {
         <div className="group">
             <div className="mb-6 overflow-hidden rounded-[10px] transition-all group-hover:scale-105">
                 <Link href={`/blog/${blog?.slug}`} aria-label={blog?.title}>
-                    <Image src={blog?.featuredImage?.url || "/placeholder.svg"} alt={blog?.title} width={600} height={400} className="object-cover" />
+                    <Image src={blog?.featuredImage?.url || "/placeholder-400-370.png"} alt={blog?.title} width={600} height={400} className="object-cover" />
                 </Link>
             </div>
-            <h3>
-                <Link href={`/blog/${blog?.slug}`} aria-label={blog?.title} className="block text-dark font-bold text-xl mb-3.5">
-                    <span className="bg-gradient-to-r from-purple-500/70 to-indigo-400/50 bg-[length:0%_3px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px]">{blog?.title}</span>
+            <h3 className="min-h-[80px]">
+                <Link href={`/blog/${blog?.slug ?? ""}`} aria-label={blog?.title ?? "Blog Post"} title={blog?.title ?? ""} className="block text-dark font-bold text-xl" >
+                    <span className="bg-gradient-to-r from-purple-500/70 to-indigo-400/50 bg-[length:0%_3px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px]">{blog?.title ? blog.title.length > 70 ? `${blog.title.substring(0, 70)}...` : blog.title : "Untitled"}</span>
                 </Link>
             </h3>
+
             <p className="text-gray-900">{blog?.excerpt && blog.excerpt.length > 120 ? `${blog.excerpt.substring(0, 120)}...` : blog?.excerpt}</p>
             <div className="flex flex-wrap gap-3 items-center justify-between mt-4.5">
                 <div className="flex items-center gap-3">

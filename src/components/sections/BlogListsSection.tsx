@@ -30,7 +30,7 @@ export default function BlogListsSection({ section }: { section: any }) {
   };
 
   return (
-    <div className="latest-blogs py-16 lg:py-20">
+    <div className="latest-blogs py-12 lg:py-20">
       <div className="container">
         {/* Heading Section */}
         {section?.heading && (
@@ -42,7 +42,7 @@ export default function BlogListsSection({ section }: { section: any }) {
         )}
 
         {/* Blog Items */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-11 gap-x-7.5 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-11 gap-x-7.5 mb-12">
           {blogLists.length > 0 ? (
             blogLists.map((blog: any, index: number) => (
               <BlogCard key={index} blog={blog}/>
