@@ -33,6 +33,7 @@ import feature from './objects/sections/feature'
 import featuresSteps from './objects/sections/featuresSteps'
 import card from './objects/sections/card'
 import cards from './objects/sections/cards'
+import separator from './objects/sections/separator'
 
 export const schemaTypes = [
     // Documents
@@ -69,5 +70,6 @@ export const schemaTypes = [
     feature,
     featuresSteps,
     card,
-    cards
+    cards,
+    separator
 ]

@@ -13,6 +13,7 @@ import SubscribeSection from "../sections/SubscribeSection";
 import ContactFormSection from "../sections/ContactFormSection";
 import FeaturesStepsSection from "../sections/FeaturesStepsSection";
 import CardsSection from "../sections/CardsSection";    
+import Separator from "../sections/Separator";
 
 export const sectionComponentMap: Record<string, React.ComponentType<{ section: any }>> = {
     heading: HeadingSection,
@@ -30,6 +31,7 @@ export const sectionComponentMap: Record<string, React.ComponentType<{ section: 
     contactForm: ContactFormSection,
     featuresSteps: FeaturesStepsSection,
     cards: CardsSection,
+    separator: Separator,
   };
 
   export default function PageSections({ sections }: { sections: any[] }) {

@@ -14,6 +14,7 @@ import subscribe from './sections/subscribe'
 import contactForm from './sections/contactForm'
 import featuresSteps from './sections/featuresSteps'
 import cards from './sections/cards'
+import separator from './sections/separator';
 
 const pageSectionsObjects = [
   heading, 
@@ -30,7 +31,8 @@ const pageSectionsObjects = [
   subscribe,
   contactForm,
   featuresSteps,
-  cards
+  cards,
+  separator
 ];
 
 export default defineField({
