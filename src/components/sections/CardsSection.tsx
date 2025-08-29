@@ -17,7 +17,7 @@ export default function CardsSection({section}: {section: any}) {
                         return  (
                             <div key={index} className={`card-item flex flex-col shadow-md items-center p-8 rounded-xl bg-white justify-center ${cardsList?.class || ""}`}>
                                 {(imageUrl || cardsList?.subheading) && (
-                                    <div className="mb-5 flex w-full items-center justify-start gap-4">
+                                    <div className="mb-5 flex w-full items-center justify-start gap-2">
                                         {imageUrl && (
                                             <Image
                                             src={imageUrl}
@@ -32,7 +32,7 @@ export default function CardsSection({section}: {section: any}) {
                                         )}
                                     </div>
                                 )}
-                                {cardsList?.heading && <h3 className="text-xl leading-[1.2] font-bold mb-5">{cardsList.heading}</h3>}
+                                {cardsList?.heading && <h3 className="text-xl leading-[1.2] font-bold mb-5 w-full">{cardsList.heading}</h3>}
                                 {cardsList?.content && <p className="text-lg">{cardsList.content}</p>}
                                 {( cardsList?.label && cardsList?.url ) ? (
                                     <div className="w-full mt-5">
