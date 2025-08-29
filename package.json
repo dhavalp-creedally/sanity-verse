@@ -1,5 +1,5 @@
 {
-  "name": "sanity-verse",
+  "name": "@creedally/sanity-verse",
   "version": "1.0.0",
   "private": true,
   "main": "package.json",
