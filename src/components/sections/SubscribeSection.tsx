@@ -13,17 +13,17 @@ export default function SubscribeSection({ section = '' }: { section?: any }) {
             {content && <p className="text-base mb-0">{content}</p>}
           </div>
           <div className="flex flex-wrap gap-5 lg:justify-end">
-            <form method="POST" className="flex w-full lg:justify-end items-center gap-3">
+            <form method="POST" className="flex flex-wrap w-full lg:justify-end items-center gap-3">
               <input
                 type="email"
                 name="email"
                 placeholder="Enter your email"
                 required
-                className="flex-1 md:flex-none px-4 py-3 w-[50%] rounded-sm max-w-[350px] border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="flex-1 md:flex-none px-4 py-3 w-[100%] sm:w-[50%] rounded-sm max-w-[100%] sm:max-w-[350px] border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
               <button
                 type="submit"
-                className="button button-primary"
+                className="button button-primary w-[100%] sm:w-[auto] justify-center align-center"
               >
                 {section?.buttonLabel || "Subscribe"}
               </button>

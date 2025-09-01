@@ -9,8 +9,8 @@ export default function MediaTextSection({section}: {section: any}) {
     const imageUrl = section?.image?.asset?._ref ? urlFor(section.image).url() : '';
 
     return (
-        <div className="container py-12">
-            <div className={`grid grid-cols-1 gap-10 items-center md:grid-cols-[1fr_1fr]`}>
+        <div className="container py-8 md:py-12">
+            <div className={`grid grid-cols-1 gap-10 items-start md:grid-cols-[1fr_1fr]`}>
                 {imagePosition === 'left' && imageUrl && (
                     <div className="flex justify-center md:justify-end">
                         <Image
@@ -22,7 +22,7 @@ export default function MediaTextSection({section}: {section: any}) {
                         />
                     </div>
                 )}
-                <div className="flex flex-col justify-center">
+                <div className={`flex flex-col justify-center ${imagePosition === 'right' ? 'order-1 md:order-none' : ''}`}>
                     {section?.subHeading && (
                         <p className="text-xl font-bold text-blue-700 mb-5">{section.subHeading}</p>
                     )}

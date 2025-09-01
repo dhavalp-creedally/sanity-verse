@@ -36,7 +36,7 @@ export default function FooterHtml({ settings }: { settings: SettingsType } ) {
 
     return(
          <footer className="border-t border-gray-200 text-gray-600 text-sm py-6">
-            <div className="container flex flex-wrap items-center gap-4 justify-between">
+            <div className="container flex flex-wrap items-center gap-4 justify-center sm:justify-between">
                 <div className="text-center lg:text-left text-[color:var(--color-dark-4)]">{(settings?.copyrightText) ? settings?.copyrightText : copyrightText}</div>
                 <div className="flex flex-wrap items-center justify-center gap-x-3 text-center text-base text-[color:var(--color-dark-4)]">
                   {settings?.footerNavigation?.map((item, index) => (

@@ -92,21 +92,21 @@ body {
   }
 
   .button-primary {
-    @apply inline-flex leading-none text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-sm text-lg px-8 py-4 cursor-pointer;
+    @apply inline-flex leading-none text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-sm text-base sm:text-lg px-8 py-4 cursor-pointer;
 
   }
 
   .button-secondary {
-    @apply inline-flex leading-none bg-transparent text-blue-600 bg-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white font-medium rounded-sm text-lg px-8 py-4 cursor-pointer;
+    @apply inline-flex leading-none bg-transparent text-blue-600 bg-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white font-medium rounded-sm text-base sm:text-lg px-8 py-4 cursor-pointer;
   }
 
   .button-rounded-primary {
-    @apply inline-flex leading-none text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-full text-lg px-8 py-4 cursor-pointer;
+    @apply inline-flex leading-none text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-full text-base sm:text-lg px-8 py-4 cursor-pointer;
 
   }
 
   .button-rounded-secondary {
-    @apply inline-flex leading-none bg-transparent text-blue-600 bg-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white font-medium rounded-full text-lg px-8 py-4 cursor-pointer;
+    @apply inline-flex leading-none bg-transparent text-blue-600 bg-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white font-medium rounded-full text-base sm:text-lg px-8 py-4 cursor-pointer;
   }
 
   .button-link {
