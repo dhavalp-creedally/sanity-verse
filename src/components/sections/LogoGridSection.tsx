@@ -66,7 +66,7 @@ export default function LogoGridSection({ section }: { section: any }) {
 
                 return (
                   <SwiperSlide key={logo?._key}>
-                    <div className="flex items-center justify-center w-full cursor-pointer py-[15px] grayscale hover:grayscale-0 transition">
+                    <div className="flex items-center justify-center w-full cursor-pointer py-[15px]  transition">
                       {imageUrl && (
                         <Image
                           src={imageUrl}
